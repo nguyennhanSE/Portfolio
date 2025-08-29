@@ -1,0 +1,67 @@
+html, body { 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-y: auto; /* Không cho phép scroll vertical */
+}
+
+.item {
+    font-family: var(--font-cinzel), serif;
+    font-size: clamp(40px, 5vw, 50px); /* Responsive font size */
+    font-weight: 500;
+    color: rgba(245, 245, 245, 0.7);
+    text-transform: uppercase;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.item:hover {
+    color: rgba(245, 245, 245, 1);
+    transform: translateX(10px);
+}
+
+.item.selected {
+    color: rgba(245, 245, 245, 1);
+    text-shadow: 0 0 20px rgba(245, 245, 245, 0.3);
+}
+
+.item:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.role {
+    font-family: var(--font-cinzel), serif;
+    font-size: clamp(24px, 3vw, 48px);
+    font-weight: 400;
+    color: rgba(245, 245, 245, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.word {
+    display: inline-block;
+    margin-right: 8px;
+}
+@media (max-width: 768px) {
+    .item {
+        font-size: clamp(28px, 6vw, 50px);
+        padding-left: 2rem;
+    }
+    
+    .role {
+        font-size: clamp(18px, 4vw, 32px);
+        bottom: 2rem;
+        right: 2rem;
+    }
+}

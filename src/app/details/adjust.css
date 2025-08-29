@@ -1,0 +1,50 @@
+.continue-text {
+    font-family: var(--font-cormorant-garamond), serif;
+    font-size: 150px;
+    font-weight: 600;
+    color: #3E392F;          
+}
+
+html, body { 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow: auto;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    scrollbar-gutter: stable;
+}
+
+/* Custom scrollbar ép sát bên phải */
+* {
+    scrollbar-width: thin;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+    right: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(235, 192, 99, 0.3);
+    border-radius: 4px;
+    border: none;
+    margin: 0;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(235, 192, 99, 0.6);
+}

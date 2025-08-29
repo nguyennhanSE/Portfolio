@@ -1,0 +1,95 @@
+.nav-items {
+    font-family: var(--font-montserrat), sans-serif;
+}
+
+.left-item {
+    font-family: var(--font-merriweather), serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.right-item {
+    font-family: "Dancing Script", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.revealer{
+    background: #988871;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;       
+}
+
+.block{ display:flex; justify-content:center; align-items:center; width:100%; height:100%; }
+
+.pre-loader {
+    position: absolute;
+    inset: 0;              
+    background: #fff;
+    z-index: 20;   
+}
+
+.loader-wrapper{
+    position: relative;
+    width: 10px;            
+    height: 150px;   
+    border-radius: 6px;
+    overflow: hidden;
+    transform: rotate(45deg);
+    box-shadow: inset 0 0 10px rgba(0,0,0,.25);
+}
+
+.loader{
+    position: absolute;
+    inset: 0;            
+    background: linear-gradient(
+    110deg,
+    rgba(255, 0, 180, 0) 0%,
+    rgba(255, 0, 180, 0.75) 18%,
+    #ff6a3d 55%,
+    #f2c56b 100%
+    );
+    transform: translateY(100%);
+    animation: fillUp 1.2s linear infinite; 
+    will-change: transform;
+}
+
+@keyframes fillUp {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+.loader-text-wrapper{
+    position: absolute;
+    inset: 0;              
+    background: #000;
+    z-index: 10;            
+}
+
+.loader-text{
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: #fff;
+}
+
+
+.port-text {
+    position: relative;
+    font-family: var(--font-montserrat), serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.continue-text {
+    font-family: var(--font-merriweather), serif;
+    font-size: 70px;
+    font-weight: 500;
+    color: #ebc063;          
+}
